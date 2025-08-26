@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Desa Notogiwang</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <style>
+      /* Scroll to Top Button */
+      .scroll-to-top {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        font-size: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s ease;
+        z-index: 999;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+      }
+      .scroll-to-top.show {
+        opacity: 1;
+        visibility: visible;
+      }
+      .scroll-to-top:hover {
+        background-color: #0056b3;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <!-- Profile Picture -->
+      <div class="profile-picture">
+        <img src="balaidesa.webp" alt="Desa Notogiwang" class="profile-image" />
+      </div>
+
+      <!-- Village Name -->
+      <h1 class="village-name">Desa Notogiwang</h1>
+
+      <!-- Village Description -->
+      <p class="village-description">
+        Informasi Seputar Desa Notogiwang Kec. Paninggaran Kab. Pekalongan
+      </p>
+
+      <!-- Social Media Icons -->
+      <div class="social-media">
+        <a href="" target="_blank" class="social-icon" title="WhatsApp">
+          <i class="fab fa-whatsapp"></i>
+        </a>
+        <a
+          href="https://youtube.com/@desanotogiwang"
+          target="_blank"
+          class="social-icon"
+          title="YouTube"
+        >
+          <i class="fab fa-youtube"></i>
+        </a>
+        <a
+          href="mailto:Desanotogiwang24@gmail.com"
+          class="social-icon"
+          title="Email"
+        >
+          <i class="fas fa-envelope"></i>
+        </a>
+        <a
+          href="https://instagram.com/kkn4_notogiwang14"
+          target="_blank"
+          class="social-icon"
+          title="Instagram"
+        >
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a
+          href="https://tiktok.com/@kkn4_notogiwang14"
+          target="_blank"
+          class="social-icon"
+          title="TikTok"
+        >
+          <i class="fab fa-tiktok"></i>
+        </a>
+      </div>
+
+      <!-- Menu Buttons -->
+      <div class="menu-buttons">
+        <a
+          href="profile-desa.html"
+          class="menu-button"
+          onclick="handleClick(this)"
+        >
+          <i class="fas fa-users"></i>
+          <span>Profile Desa</span>
+          <i class="fas fa-ellipsis-v"></i>
+        </a>
+
+        <a
+          href="struktur-kepengurusan.html"
+          class="menu-button"
+          onclick="handleClick(this)"
+        >
+          <i class="fas fa-folder"></i>
+          <span>Struktur Kepengurusan</span>
+          <i class="fas fa-ellipsis-v"></i>
+        </a>
+
+        <a
+          href="kegiatan-rutin.html"
+          class="menu-button"
+          onclick="handleClick(this)"
+        >
+          <i class="fas fa-list"></i>
+          <span>Kegiatan</span>
+          <i class="fas fa-ellipsis-v"></i>
+        </a>
+
+        <a
+          href="informasi-lokasi.html"
+          class="menu-button"
+          onclick="handleClick(this)"
+        >
+          <i class="fas fa-map-marker-alt"></i>
+          <span>Informasi & Lokasi</span>
+          <i class="fas fa-ellipsis-v"></i>
+        </a>
+
+        <a
+          href="dokumentasi-kegiatan.html"
+          class="menu-button"
+          onclick="handleClick(this)"
+        >
+          <i class="fas fa-camera"></i>
+          <span>Dokumentasi Kegiatan</span>
+          <i class="fas fa-ellipsis-v"></i>
+        </a>
+      </div>
+
+      <!-- Footer -->
+      <footer class="footer">
+        <div class="footer-bottom">
+          <p>&copy; 2025 Desa Notogiwang. All rights reserved.</p>
+          <p>KKN4 Notogiwang 14</p>
+        </div>
+      </footer>
+    </div>
+
+    <!-- Scroll to Top Button -->
+    <button id="scrollToTop" class="scroll-to-top">
+      <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script>
+      function handleClick(element) {
+        // Add click effect
+        element.style.transform = "scale(0.95)";
+        setTimeout(() => {
+          element.style.transform = "";
+        }, 150);
+      }
+
+      // Add loading animation
+      document.addEventListener("DOMContentLoaded", function () {
+        const buttons = document.querySelectorAll(".menu-button");
+        buttons.forEach((button, index) => {
+          button.style.animationDelay = index * 0.1 + "s";
+          button.classList.add("fade-in");
+        });
+      });
+
+      // Scroll to Top Functionality
+      const scrollToTopBtn = document.getElementById("scrollToTop");
+
+      window.addEventListener("scroll", () => {
+        if (window.scrollY > 200) {
+          // Muncul setelah scroll 200px
+          scrollToTopBtn.classList.add("show");
+        } else {
+          scrollToTopBtn.classList.remove("show");
+        }
+      });
+
+      scrollToTopBtn.addEventListener("click", () => {
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth",
+        });
+      });
+    </script>
+  </body>
+</html>

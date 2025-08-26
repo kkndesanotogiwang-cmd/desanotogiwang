@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Profile Desa - Desa Notogiwang</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <style>
+      /* Scroll to Top Button */
+      .scroll-to-top {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        font-size: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s ease;
+        z-index: 999;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+      }
+      .scroll-to-top.show {
+        opacity: 1;
+        visibility: visible;
+      }
+      .scroll-to-top:hover {
+        background-color: #0056b3;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <!-- Back Button -->
+      <div class="back-button">
+        <a href="index.html"> <i class="fas fa-arrow-left"></i> Kembali </a>
+      </div>
+
+      <!-- Page Title -->
+      <h1 class="page-title">
+        <i class="fas fa-users"></i>
+        Profile Desa
+      </h1>
+
+      <!-- Village Profile Content -->
+      <div class="content-section">
+        <div class="profile-card">
+          <h2>Desa Notogiwang</h2>
+          <p class="location">
+            Kecamatan Paninggaran, Kabupaten Pekalongan, Jawa Tengah
+          </p>
+
+          <div class="info-grid">
+            <div class="info-item">
+              <i class="fas fa-map-marker-alt"></i>
+              <div>
+                <strong>Luas Wilayah:</strong>
+                <p>246 Hektar</p>
+              </div>
+            </div>
+
+            <div class="info-item">
+              <i class="fas fa-users"></i>
+              <div>
+                <strong>Jumlah Penduduk:</strong>
+                <p>5.782 Jiwa</p>
+              </div>
+            </div>
+
+            <div class="info-item">
+              <i class="fas fa-home"></i>
+              <div>
+                <strong>Jumlah KK:</strong>
+                <p>850 Kepala Keluarga</p>
+              </div>
+            </div>
+
+            <div class="info-item">
+              <i class="fas fa-mountain"></i>
+              <div>
+                <strong>Ketinggian:</strong>
+                <p>450 mdpl</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="profile-card">
+          <h3>Sejarah Desa</h3>
+          <p>
+            Desa Notogiwang berasal dari kata “Noto” yang artinya Penatann dan
+            “Giwang” yang berarti Anting-anting sehingga diartikan sebuah desa
+            yang dibangun dan ditata agar terlihat indah seperti perhiasan
+            anting.
+          </p>
+          <br />
+          <p>
+            Desa Notogiwang sudah ada sejak lama dan pada waktu penjajahan
+            Belanda Desa Notogiwang ini merupakan tempat persembunyian sehingga
+            nama Paninggaran pun dipakai sebagai nama Kecamatan di Wilayah
+            Kabupaten Pekalongan sampai sekarang.
+          </p>
+        </div>
+
+        <div class="profile-card">
+          <h3>Dusun Desa Notogiwang</h3>
+          <div class="potensi-list">
+            <div class="potensi-item">
+              <i class="fas fa-house fa-lg"></i>
+              <span>Dusun Sitisuk </span>
+            </div>
+            <div class="potensi-item">
+              <i class="fas fa-house fa-lg"></i>
+              <span>Dusun Rowadi </span>
+            </div>
+            <div class="potensi-item">
+              <i class="fas fa-house fa-lg"></i>
+              <span>Dusun Notowarih Atas</span>
+            </div>
+            <div class="potensi-item">
+              <i class="fas fa-house fa-lg"></i>
+              <span>Dusun Notowarih Bawah</span>
+            </div>
+            <div class="potensi-item">
+              <i class="fas fa-house fa-lg"></i>
+              <span>Dusun Losari</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="profile-card">
+          <h3>Potensi Desa</h3>
+          <div class="potensi-list">
+            <div class="potensi-item">
+              <i class="fas fa-seedling"></i>
+              <span>Pertanian </span>
+            </div>
+            <div class="potensi-item">
+              <i class="fas fa-tree"></i>
+              <span>Perkebunan </span>
+            </div>
+            <div class="potensi-item">
+              <i class="fas fa-sheep"></i>
+              <span>Peternakan</span>
+            </div>
+            <div class="potensi-item">
+              <i class="fas fa-industry"></i>
+              <span>Industri Rumah Tangga</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="profile-card">
+          <h3>Fasilitas Umum</h3>
+          <div class="fasilitas-list">
+            <div class="fasilitas-item">
+              <i class="fas fa-mosque"></i>
+              <span>Masjid & Musholla (14 unit)</span>
+            </div>
+            <div class="fasilitas-item">
+              <i class="fas fa-school"></i>
+              <span>SD & SMP (3 sekolah)</span>
+            </div>
+            <div class="fasilitas-item">
+              <i class="fas fa-school"></i>
+              <span>RA/TK & PAUD (4 Unit)</span>
+            </div>
+            <div class="fasilitas-item">
+              <i class="fas fa-book-quran"></i>
+              <span>TPQ (7 TPQ)</span>
+            </div>
+            <div class="fasilitas-item">
+              <i class="fas fa-road"></i>
+              <span>Jalan Desa (75% beraspal)</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scroll to Top Button -->
+    <button id="scrollToTop" class="scroll-to-top">
+      <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script>
+      // Scroll to Top Functionality
+      const scrollToTopBtn = document.getElementById("scrollToTop");
+
+      window.addEventListener("scroll", () => {
+        if (window.scrollY > 200) {
+          // Muncul setelah scroll 200px
+          scrollToTopBtn.classList.add("show");
+        } else {
+          scrollToTopBtn.classList.remove("show");
+        }
+      });
+
+      scrollToTopBtn.addEventListener("click", () => {
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth",
+        });
+      });
+    </script>
+  </body>
+</html>
